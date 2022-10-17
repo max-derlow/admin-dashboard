@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+:root {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  --filter-main-white: invert(99%) sepia(17%) saturate(169%) hue-rotate(98deg)
+    brightness(101%) contrast(99%);
+  --filter-main-accent: invert(81%) sepia(38%) saturate(1407%)
+    hue-rotate(339deg) brightness(101%) contrast(88%);
+  --main-white: #fbfdfe;
+  --main-blue: #1992d4;
+  --main-accent: #f0b52c;
+  --background-grey: #e2e8f0;
+  --icon-small: 1.5rem;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  background-color: var(--background-grey);
+}
+
+.sidebar {
+  display: grid;
+  min-height: 100vh;
+  align-content: flex-start;
+  gap: 15px;
+  background-color: var(--main-blue);
+  color: var(--main-white);
+}
+
+.sidebar .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+  font-weight: 700;
+  font-size: 1.75rem;
+}
+
+img.logo-icon {
+  filter: var(--filter-main-white);
+}
+
+img.menu-icon {
+  filter: var(--filter-main-white);
+  width: var(--icon-small);
+}
+
+.menu-main,
+.menu-settings {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  gap: 15px;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+}
+
+/*todo start*/
+.menu-item:hover {
+  color: var(--main-accent);
+}
+
+.menu-item:hover img {
+  filter: var(--main-accent);
+}
+/*todo end*/
+
+.siderbar .menu-main {
+}
+
+.siderbar .menu-settings {
+}
+
+.header {
+  display: grid;
+  grid-column: 2/3;
+  grid-template-rows: 1fr 2fr;
+  max-height: 10vh;
+  padding: 10px 30px;
+  background-color: var(--main-white);
+}
+
+.header .nav-top {
+  display: flex;
+  grid-row: 1/2;
+  justify-content: space-between;
+}
+
+.header .nav-bot {
+  display: flex;
+  grid-row: 2/3;
+  justify-content: space-between;
+}
+
+.nav-top .search-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-bar img {
+  width: var(--icon-small);
+}
+
+.nav-top .account-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.account-bar img {
+  width: var(--icon-small);
+}
+
+.article-wrapper {
+}
+
+.article {
+  display: grid;
+}
